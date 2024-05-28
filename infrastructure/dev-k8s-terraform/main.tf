@@ -189,7 +189,7 @@ resource "aws_instance" "worker-2" {
     ami = "ami-053b0d53c279acc90"
     instance_type = "t3a.medium"
     vpc_security_group_ids = [aws_security_group.petclinic-kube-worker-sg.id, aws_security_group.petclinic-mutual-sg.id]
-    key_name = "linux-key-pair"
+    key_name = "petclinic-ansible-test-dev.key"
     subnet_id = "subnet-00ecf65978327a78c"  # select own subnet_id of us-east-1a
     availability_zone = "us-east-1a"
     tags = {
